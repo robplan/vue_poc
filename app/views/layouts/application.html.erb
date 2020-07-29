@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VuePoc</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="vue">
+      <%= yield %>
+      <app :message="<%= 'hi!'.to_json %>"> </app>
+      <a-button variant="primary"> Primary Button From Apptegy Components! </a-button>
+    </div>
+  </body>
+</html>
